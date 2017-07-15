@@ -1,6 +1,7 @@
 package data;
 
 public class Parameter {
+    private int tipe;
     private int id;
     private String barang;
     private String nama;
@@ -8,16 +9,15 @@ public class Parameter {
     private String alamat;
     private int angsuran;
     private int kwitansi;
-    private int tipe;
     
-    public Parameter (int id, String Barang, String nama, String no_hp, String alamat, int angsuran, int tipe, int kwitansi) {
+    public Parameter (int tipe, int id, String Barang, String nama, String no_hp, String alamat, int angsuran, int kwitansi) {
+        this.tipe       = tipe;
         this.id         = id;
         this.barang     = Barang;
         this.nama       = nama;
         this.no_hp      = no_hp;
         this.alamat     = alamat;
         this.angsuran   = angsuran;
-        this.tipe       = tipe;
         this.kwitansi   = kwitansi;
     }
     
@@ -47,5 +47,9 @@ public class Parameter {
     
     public Integer getKwitansi () {
         return kwitansi;
+    }
+    
+    public Integer getTipe () {
+        return tipe;
     }
 }

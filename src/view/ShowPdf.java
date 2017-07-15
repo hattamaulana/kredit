@@ -1,5 +1,9 @@
 package view;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import net.sf.jasperreports.swing.JRViewer;
+
 public class ShowPdf extends javax.swing.JFrame {
     
     private void nimbusStyleUI() {
@@ -21,9 +25,17 @@ public class ShowPdf extends javax.swing.JFrame {
         }
     }
 
-    public ShowPdf() {
-        initComponents();
+    public ShowPdf(JRViewer previewPdf) {
         this.nimbusStyleUI();
+        
+        System.out.println ("open");
+        initComponents();
+        previewPdf.setOpaque(true);
+        previewPdf.setVisible(true);
+        jScrollPane1.add(previewPdf);
+        jScrollPane1.setViewportView(previewPdf);
+        Dimension dimensi = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setSize(dimensi.width, dimensi.height);
     }
     
     @SuppressWarnings("unchecked")
@@ -31,8 +43,6 @@ public class ShowPdf extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -42,7 +52,7 @@ public class ShowPdf extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)
         );
 
         pack();

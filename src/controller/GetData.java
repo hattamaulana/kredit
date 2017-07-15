@@ -125,8 +125,6 @@ public class GetData {
             _db.disconnect (start_connect);
           }
           catch (SQLException error) {
-            System.out.println ("Insert tambah konsumen Error Bos !");
-            error.printStackTrace ();
             return false;
           }
         catch (NullPointerException error) { }
