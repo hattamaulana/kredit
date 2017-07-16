@@ -17,16 +17,29 @@ public class Database {
   }
 
   public Connection connect () {
-    try {
-      Class.forName (this.driver);
-      return DriverManager.getConnection (this.database, this.user, this.password);
-    }
-    catch (ClassNotFoundException error) {
-      JOptionPane.showMessageDialog(null, "Maaf Anda belum membuka aplikasi XAMPP.");
-    }
-    catch (SQLException error) {
-      JOptionPane.showMessageDialog(null, "Maaf Anda belum membuka aplikasi XAMPP.");
-    }
+    boolean loop   = false;
+    int peringatan = 0;
+    do {
+        try {
+          Class.forName (this.driver);
+          return DriverManager.getConnection (this.database, this.user, this.password);
+        }
+        catch (ClassNotFoundException error) {
+          JOptionPane.showMessageDialog(null, "Maaf Anda belum membuka aplikasi XAMPP.");
+        }
+        catch (SQLException error) {
+          JOptionPane.showMessageDialog(null, "Maaf Anda belum membuka aplikasi XAMPP atau Mengaktifkan MySql.");
+          JOptionPane.showMessageDialog(null, "Caranya : \n 1. Tekan tombol Windows. \n 2. Ketikkan XAMPP. \n 3. Klik XAMPP Control Panel. \n 4. Klik Start pada MySQL");
+          loop = true;
+          peringatan++;
+          if (peringatan > 1) {
+              int exit = JOptionPane.showConfirmDialog(null, "Apakah Anda ingin menghentikan proses aplikasi ini ? ");
+              if (exit == 0) {
+                  System.exit(0);
+              }
+          }
+        }
+    } while (loop);
     return null;
   }
 
@@ -36,8 +49,7 @@ public class Database {
         connect.close ();
       }
       catch (SQLException error) {
-        System.out.println ("SQL Eroor disconnect !");
-        error.printStackTrace ();
+      
       }
     }
   }

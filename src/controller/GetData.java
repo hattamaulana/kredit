@@ -28,6 +28,10 @@ public class GetData {
         _db = new Database (db_driver, db_url, db_user, db_pass);
     }
     
+    public void tesKoneksi () {
+        _db.connect();
+    }
+    
     /*
      * Block Select set data
      */
@@ -116,6 +120,40 @@ public class GetData {
     
     // Fungsi untuk menambah data konsumen ke dalam database;
     public boolean insert (String sql) {
+        try {
+            Connection start_connect = _db.connect();
+            
+            PreparedStatement statement = start_connect.prepareStatement (sql);
+            statement.executeUpdate ();
+            
+            _db.disconnect (start_connect);
+          }
+          catch (SQLException error) {
+            return false;
+          }
+        catch (NullPointerException error) { }
+        return true;
+    }
+    
+    // Fungsi untuk menambah data konsumen ke dalam database;
+    public boolean delete (String sql) {
+        try {
+            Connection start_connect = _db.connect();
+            
+            PreparedStatement statement = start_connect.prepareStatement (sql);
+            statement.executeUpdate ();
+            
+            _db.disconnect (start_connect);
+          }
+          catch (SQLException error) {
+            return false;
+          }
+        catch (NullPointerException error) { }
+        return true;
+    }
+    
+    // Fungsi untuk menambah data konsumen ke dalam database;
+    public boolean update (String sql) {
         try {
             Connection start_connect = _db.connect();
             
