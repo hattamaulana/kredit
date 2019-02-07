@@ -1,13 +1,10 @@
-<h1 align="center"> KREDIT SOFTWARE </h1>
+<h1 align="center"> JAVA SWING </h1>
+This repo I re-write code line of line because I want to improve and develop my code to learn. To clone this repo you can clone in single branch. You just to copy and run :
 
-### Desktop
-[![icon](https://img.shields.io/badge/platform-desktop-blue.svg)](https://github.com/hattamaulana/kredit/tree/java-desktop)
-<br>
-[![icon](https://img.shields.io/badge/language-java-red.svg)](https://github.com/hattamaulana/kredit/tree/java-desktop)
-<p align="center"><img width="720px" src="img/desktop/desktop.png" alt="screenshot"></p>
+```git
+/* If you like use https *
+$ git clone --single-branch --branch Java-Swing https://github.com/hattamaulana/kredit.git
 
-### Web Version
-![icon](https://img.shields.io/badge/platform-web-blue.svg)
-<br>
-<a href="https://github.com/hattamaulana/kredit/tree/vue-laravel-web"> <img src="https://img.shields.io/badge/language-laravel-red.svg" /> </a>
-<a href="https://github.com/hattamaulana/kredit/tree/vue-laravel-web"> <img src="https://img.shields.io/badge/language-vue-brightgreen.svg" /> </a>
+/* If you like use ssh */
+$ git clone --single-branch --branch Java-Swing git@github.com:hattamaulana/kredit.git
+```
