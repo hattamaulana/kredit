@@ -5,7 +5,7 @@
  */
 package com.github.hattamaulana.dao;
 
-import com.github.hattamaulana.project.uas.lib.ConnectionFactory;
+import com.github.hattamaulana.lib.ConnectionFactory;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

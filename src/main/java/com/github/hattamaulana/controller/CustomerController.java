@@ -6,7 +6,7 @@
 package com.github.hattamaulana.controller;
 
 import com.github.hattamaulana.dao.CustomerDao;
-import com.github.hattamaulana.project.uas.entities.Customer;
+import com.github.hattamaulana.entities.Customer;
 import java.util.HashMap;
 import java.util.List;
 

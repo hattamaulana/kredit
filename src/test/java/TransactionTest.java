@@ -1,8 +1,8 @@
 
 import com.github.hattamaulana.controller.TransactionController;
-import com.github.hattamaulana.project.uas.entities.Angsuran;
-import com.github.hattamaulana.project.uas.entities.Customer;
-import com.github.hattamaulana.project.uas.entities.Transaction;
+import com.github.hattamaulana.entities.Angsuran;
+import com.github.hattamaulana.entities.Customer;
+import com.github.hattamaulana.entities.Transaction;
 import junit.framework.Assert;
 import org.junit.Test;
 

@@ -7,8 +7,8 @@ package com.github.hattamaulana.controller;
 
 import com.github.hattamaulana.dao.AngsuranDao;
 import com.github.hattamaulana.dao.TransactionDao;
-import com.github.hattamaulana.project.uas.entities.Angsuran;
-import com.github.hattamaulana.project.uas.entities.Transaction;
+import com.github.hattamaulana.entities.Angsuran;
+import com.github.hattamaulana.entities.Transaction;
 import java.util.HashMap;
 import java.util.List;
 

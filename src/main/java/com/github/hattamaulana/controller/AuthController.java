@@ -7,10 +7,10 @@ package com.github.hattamaulana.controller;
 
 import com.github.hattamaulana.dao.EmployeeDao;
 import com.github.hattamaulana.dao.UserDao;
-import com.github.hattamaulana.project.uas.entities.Employee;
-import com.github.hattamaulana.project.uas.entities.Owner;
-import com.github.hattamaulana.project.uas.entities.User;
-import com.github.hattamaulana.project.uas.lib.IUser;
+import com.github.hattamaulana.entities.Employee;
+import com.github.hattamaulana.entities.Owner;
+import com.github.hattamaulana.entities.User;
+import com.github.hattamaulana.lib.IUser;
 import java.util.HashMap;
 import java.util.List;
 

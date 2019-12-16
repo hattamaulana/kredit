@@ -5,7 +5,7 @@
  */
 
 import com.github.hattamaulana.controller.CustomerController;
-import com.github.hattamaulana.project.uas.entities.Customer;
+import com.github.hattamaulana.entities.Customer;
 import junit.framework.Assert;
 import org.junit.Test;
 

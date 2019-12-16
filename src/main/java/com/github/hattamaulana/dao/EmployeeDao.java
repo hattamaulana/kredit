@@ -5,9 +5,9 @@
  */
 package com.github.hattamaulana.dao;
 
-import com.github.hattamaulana.project.uas.entities.Customer;
-import com.github.hattamaulana.project.uas.entities.Employee;
-import com.github.hattamaulana.project.uas.entities.User;
+import com.github.hattamaulana.entities.Customer;
+import com.github.hattamaulana.entities.Employee;
+import com.github.hattamaulana.entities.User;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;

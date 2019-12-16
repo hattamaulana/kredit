@@ -6,7 +6,7 @@
 
 
 import com.github.hattamaulana.controller.AuthController;
-import com.github.hattamaulana.project.uas.entities.Employee;
+import com.github.hattamaulana.entities.Employee;
 import junit.framework.Assert;
 import org.junit.Test;
 
