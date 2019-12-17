@@ -20,7 +20,7 @@ import java.util.List;
  */
 public class AuthController {
     
-    public boolean login(String username, String password) {
+    public IUser login(String username, String password) {
         UserDao dao = new UserDao();
         
         HashMap<String, Object> conditions = new HashMap();
@@ -32,18 +32,17 @@ public class AuthController {
         if (users.size() == 1) {
             if (users.get(0).getRole() == 1) {
                 Owner owner = new Owner();
-                owner.redirectToView();
+                
+                return owner;
             } else if (users.get(0).getRole() == 0) {
                 EmployeeDao employeeDao = new EmployeeDao();
                 Employee employee = employeeDao.getById(users.get(0).getId());
                 
-                employee.redirectToView();
+                return employee;
             }
-            
-            return true;
         }
         
-        return false;
+        return null;
     }
     
     public boolean registerEmployee(Employee user) {

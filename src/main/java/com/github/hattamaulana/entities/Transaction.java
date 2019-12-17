@@ -78,6 +78,8 @@ public class Transaction extends BaseEntity {
                 return getTipeAngsuran();
             case 3:
                 return getStatus();
+            case 4: 
+                return getProduct().getHarga();
         }
         
         return null;

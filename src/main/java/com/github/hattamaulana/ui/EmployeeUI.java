@@ -36,7 +36,7 @@ public class EmployeeUI extends javax.swing.JFrame
     private String[] headerCustomerTable = {
         "Customer Id", "Nama", "Alamat", "No. Hp." };
     private String[] headerTransactionTable = {
-        "Tanggal", "Nama Product", "Jenis Angsuran", "Status" };
+        "Tanggal", "Nama Product", "Jenis Angsuran", "Status", "Harga" };
     
     /**
      * Creates new form Employee

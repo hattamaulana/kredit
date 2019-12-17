@@ -40,16 +40,18 @@ public class UserDao<T extends User> extends BaseDao<T> {
     }
 
     @Override
-    protected T getItem(List<T> items, ResultSet resultSet) throws SQLException {
-        T generic = (T) new User();
+    protected T getItem (
+            List<T> items, ResultSet resultSet
+    ) throws SQLException {
+        T t = (T) new User();
         
-        generic.setId(resultSet.getString("id"));
-        generic.setName(resultSet.getString("name"));
-        generic.setUsername(resultSet.getString("username"));
-        generic.setPassword(resultSet.getString("password"));
-        generic.setRole(resultSet.getInt("role"));
+        t.setId(resultSet.getString("id"));
+        t.setName(resultSet.getString("name"));
+        t.setUsername(resultSet.getString("username"));
+        t.setPassword(resultSet.getString("password"));
+        t.setRole(resultSet.getInt("role"));
         
-        return generic;
+        return t;
     }
     
 }
