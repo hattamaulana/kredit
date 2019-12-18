@@ -5,8 +5,6 @@
  */
 package com.github.hattamaulana.lib;
 
-import java.util.Map;
-
 /**
  *
  * @author ngub

@@ -7,6 +7,7 @@
 
 import com.github.hattamaulana.controller.AuthController;
 import com.github.hattamaulana.entities.Employee;
+import com.github.hattamaulana.lib.IUser;
 import junit.framework.Assert;
 import org.junit.Test;
 
@@ -14,10 +15,10 @@ import org.junit.Test;
  *
  * @author ngub
  */
-public class Auth {
+public class AuthTest {
     private AuthController auth;
     
-    public Auth() {
+    public AuthTest() {
         auth = new AuthController();
     }
     
@@ -25,10 +26,15 @@ public class Auth {
     public void testUserLogin() {
         System.out.println("Tes Login User : ");
         
-        boolean expected = true;
-//        boolean actual   = auth.login("karyawan", "karyawan");
+        IUser expected = new IUser() {
+            @Override
+            public void redirectToView() {
+                
+            }
+        };
+        IUser actual   = auth.login("karyawan", "karyawan");
         
-//        Assert.assertEquals(expected, actual);
+        Assert.assertEquals(expected, actual);
         
         System.out.println("* OK");
     }

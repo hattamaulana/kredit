@@ -60,6 +60,7 @@ public class EmployeeUI extends javax.swing.JFrame
         
         // Set Product Name
         setProduct();
+        txtNid.setEditable(false);
     }
     
     private void setProduct() {
