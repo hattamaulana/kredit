@@ -26,13 +26,8 @@ public class AuthTest {
     public void testUserLogin() {
         System.out.println("Tes Login User : ");
         
-        IUser expected = new IUser() {
-            @Override
-            public void redirectToView() {
-                
-            }
-        };
-        IUser actual   = auth.login("karyawan", "karyawan");
+        boolean expected = true;
+        boolean actual   = auth.login("karyawan", "karyawn") instanceof IUser;
         
         Assert.assertEquals(expected, actual);
         

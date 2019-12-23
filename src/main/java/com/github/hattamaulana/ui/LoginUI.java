@@ -8,7 +8,6 @@ package com.github.hattamaulana.ui;
 import com.github.hattamaulana.controller.AuthController;
 import com.github.hattamaulana.entities.Employee;
 import com.github.hattamaulana.entities.Owner;
-import com.github.hattamaulana.entities.User;
 import com.github.hattamaulana.lib.IUser;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
@@ -113,7 +112,7 @@ public class LoginUI extends javax.swing.JFrame {
         String username = txtUsername.getText();
         String password = txtPassword.getText();
         IUser user      = auth.login(username, password);
-        //polimorfisme 
+        //polimorfisme: jadi polimorfisme nya ada 2 
         if (user != null) {
             if (user instanceof Employee) {
                 Employee e = (Employee) user;
