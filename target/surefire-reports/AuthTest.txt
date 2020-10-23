@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: AuthTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.565 s <<< FAILURE! - in AuthTest
-testUserLogin  Time elapsed: 0.559 s  <<< FAILURE!
-junit.framework.AssertionFailedError: expected:<true> but was:<false>
-	at AuthTest.testUserLogin(AuthTest.java:32)
-
