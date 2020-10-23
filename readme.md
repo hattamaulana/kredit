@@ -1,5 +1,7 @@
 # Software Kredit  :rocket:
 
+Software Kredit is a Desktop application built using java swing.
+
 ## Features
 
 - Login as Employee or Owner :closed_lock_with_key:
@@ -7,8 +9,6 @@
 - Add New Customer.
 - Add New Transaction.
 - Pay a Deposit :money_with_wings:
-
-
 
 ### Class Diagrams
 
